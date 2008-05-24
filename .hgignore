@@ -2,4 +2,4 @@
 parts
 \.installed.cfg
 bin
-__.*__tmp.*
+__minitage.*__tmp.*
