@@ -8,7 +8,7 @@ def getopenldapenv(options,buildout):
         cmd1 = "gsed \
                 -e 's|-lsasl2||' \
                 -e 's|-lsasl||' \
-                -i %s/*/configure" % (options['compile-directory'])
+                -i %s/configure" % (options['compile-directory'])
 
         if os.system(cmd1):
                 raise Error('System error')
