@@ -13,5 +13,7 @@ def getopenldapenv(options,buildout):
         if os.system(cmd1):
                 raise Error('System error')
 
+    if uname in ['Linux']:
+        os.environ['CPPFLAGS'] = '%s %s' % (os.environ.get('CPPFLAGS', ''), ' -D_GNU_SOURCE ')
 
 # vim:set ts=4 sts=4 et  :
